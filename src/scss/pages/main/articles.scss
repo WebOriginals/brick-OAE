@@ -1,0 +1,45 @@
+.articles {
+  @include adaptiveValue(padding-top, 120, 90);
+  @include adaptiveValue(padding-bottom, 120, 90);
+
+  &__title {
+    @include adaptiveValue(margin-bottom, 60, 30);
+  }
+
+  &__grid {
+    display: grid;
+    @include adaptiveValue(grid-gap, 30, 60);
+  }
+
+  &__item {
+    display: grid;
+    grid-gap: rem(20) rem(60);
+    @include mq('tablet') {
+      align-items: center;
+      grid-template-columns: rem(350) 1fr;
+    }
+
+    .img-ibg {
+      @include adaptiveValue(height, 350, 330);
+
+
+    }
+  }
+
+  &__name {
+
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+
+  &__btn {
+    width: fit-content;
+  }
+
+  &__desc {
+    display: grid;
+    @include adaptiveValue(grid-gap, 30, 10);
+  }
+}

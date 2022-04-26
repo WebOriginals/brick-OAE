@@ -1,0 +1,23 @@
+include pug/mixins
+doctype html
+html(lang="ru")
+	+head('Главная')
+	body
+		.wrapper
+			include pug/_basic/_header
+			main.page.main
+				include pug/main/first
+				include pug/main/authorSlider
+				include pug/main/tab
+				include pug/main/authorNo
+				include pug/main/colum
+				include pug/main/twoSlider
+				include pug/main/form
+				include pug/main/author
+				include pug/main/articles
+				include pug/main/form
+
+			include pug/_basic/_footer
+
+		include pug/_basic/_popup
+		include pug/_basic/_js

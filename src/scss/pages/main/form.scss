@@ -1,0 +1,44 @@
+.form-bg{
+  @include adaptiveValue(padding-top,120,90);
+  @include adaptiveValue(padding-bottom,120,90);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__container{
+    color: $color_1;
+
+  }
+  &__body{
+    @include mq('tablet') {
+      max-width: rem(660);
+    }
+  }
+  &__title{
+    margin-bottom: rem(10);
+  }
+  p{
+
+  }
+  &__form{
+    margin-top: rem(30);
+    display: grid;
+    grid-gap: rem(10);
+  }
+  &__bd{
+    display: grid;
+    grid-gap: rem(25);
+    margin-bottom: rem(30);
+    @include mq('tablet') {
+      max-width: rem(450);
+    }
+  }
+  a{
+    text-decoration: underline;
+  }
+  &__btn{
+    @include mq('tablet') {
+      max-width: rem(200);
+    }
+  }
+}

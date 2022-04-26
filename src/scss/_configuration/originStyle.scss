@@ -1,0 +1,154 @@
+//<Разметка текста>====================================================================================================
+.offer {
+  @include adaptiveValue(font-size,60, 49);
+  font-weight: 500;
+}
+
+.title{
+
+}
+
+.h1,h1 {
+  @include adaptiveValue(font-size,60, 34);
+  font-weight: 500;
+
+}
+
+.h2,h2{
+  @include adaptiveValue(font-size,36, 24);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.h3,h3{
+  @include adaptiveValue(font-size,24, 20);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.h4,h4{
+  @include adaptiveValue(font-size,24, 24);
+  font-weight: 700;
+}
+
+.h5,h5{
+  @include adaptiveValue(font-size,20, 20);
+  font-weight: 700;
+}
+
+.h6,h6{
+  @include adaptiveValue(font-size,14, 14);
+  font-weight: 700;
+}
+
+q{
+
+}
+
+
+
+//Стилизация кнопок
+.button-g{
+  background: $color_6;
+  color: $color_1;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 400;
+  border-radius: rem(4);
+  border: 1px solid $color_6;
+
+  @include mq('tablet-wide') {
+    min-width: rem(270);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: darken($color_6, 5);
+    }
+  }
+  &:focus{
+    background: darken($color_6, 5);
+  }
+
+}
+
+.button-w{
+  background: $color_1;
+  color: $mainColor;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 400;
+  border-radius: rem(4);
+  border: 1px solid $color_6;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: darken($color_1, 5);
+    }
+  }
+  &:focus{
+    background: darken($color_6, 5);
+  }
+
+  @include mq('tablet-wide') {
+    min-width: rem(270);
+  }
+}
+
+.button-tr{
+  background: transparent;
+  color: $color_1;
+  padding: 0 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+  transition: .5s;
+  @include adaptiveValue(font-size,18, 14);
+  font-weight: 400;
+  border-radius: rem(4);
+  border: 1px solid $color_1;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color_1;
+      color: $mainColor;
+      //box-shadow:0px 5px 5px 2px rgba(0,0,0,0.34);
+    }
+  }
+  &:focus{
+    background: darken($color_6, 5);
+    color: $color_1;
+    box-shadow:0px 0px 5px 2px rgba(0,0,0,0.34)inset;
+  }
+
+  @include mq('tablet-wide') {
+    min-width: rem(190);
+  }
+}
+
+
+
+//Стилизация input
+
+.input{
+  background: #FFFFFF;
+  border: 1px solid #414042;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: em(16) em(20);
+}

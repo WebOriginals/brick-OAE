@@ -1,0 +1,161 @@
+.tab-form{
+  @include adaptiveValue(padding-top, 120, 90);
+  @include adaptiveValue(padding-bottom, 120, 90);
+  background-color: $color_4;
+  color: $color_1;
+  background-image: url("../img/png/bg-darck-right.webp");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  @include maq('tablet') {
+    background-size: contain;
+  }
+
+  &__container{
+
+  }
+  &__title{
+    @include adaptiveValue(margin-bottom, 60, 30);
+  }
+  .tabs{
+    @include adaptiveValue(margin-bottom, 60, 90);
+
+    &__navigation{
+      @include adaptiveValue(margin-bottom, 45, 15);
+      overflow-x: auto;
+      max-width: 100%;
+      padding-bottom: 15px;
+      @include mq('tablet') {
+        margin-left: -15px;
+      }
+
+      .simplebar-content{
+        display: flex;
+        gap: rem(15);
+
+        &:before,&:after{
+          display: none;
+        }
+      }
+      .tabs__title{
+        @include adaptiveValue(font-size, 20, 16);
+        font-weight: 400;
+        transition: .5s;
+        flex: 0 0 auto;
+
+        &._tab-active {
+          border-bottom: none;
+          color: $color_6;
+        }
+
+        @media (any-hover: hover) {
+          &:hover {
+            color: $color_6;
+          }
+        }
+      }
+    }
+    &__content{
+      padding: 0 ;
+      .main-tab__body{
+
+      }
+    }
+  }
+
+  .card{
+    border-radius: rem(4);
+    overflow: hidden;
+    background-color: $color_1;
+    color: $color_4;
+
+    &__img-ibg{
+      @include adaptiveValue(height,263, 207);
+    }
+    &__name{
+      @include adaptiveValue(font-size,20, 16);
+      font-weight: 400;
+    }
+    &__description{
+
+
+      @include adaptiveValue(margin-top,20, 30);
+      @include adaptiveValue(margin-bottom,32, 30);
+      display: grid;
+      grid-gap: rem(15);
+      align-items: center;
+
+      li{
+        display: flex;
+        gap: rem(10);
+      }
+
+      span{
+        @include adaptiveValue(font-size,16, 15);
+        font-weight: 300;
+      }
+    }
+    &__btn{
+      padding: 0 20px;
+      @include adaptiveValue(font-size,17, 12);
+    }
+    &__padding{
+      @include adaptiveValue(padding-top, 20, 30);
+      @include adaptiveValue(padding-bottom, 30, 30);
+      @include adaptiveValue(padding-left, 30, 28);
+      @include adaptiveValue(padding-right, 30, 28);
+    }
+  }
+
+  .form-book{
+    @include adaptiveValue(padding-top, 60, 30);
+    @include adaptiveValue(padding-bottom, 60, 30);
+    @include adaptiveValue(padding-left, 60, 30);
+    @include adaptiveValue(padding-right, 60, 30);
+    border: 1px solid $color_6;
+
+    &__title{
+      @include adaptiveValue(margin-bottom, 10, 10);
+    }
+    &__subTitle{
+      line-height: 1.5;
+    }
+    &__grid{
+      @include adaptiveValue(margin-top, 60, 30);
+      display: grid;
+      grid-gap: rem(30) 0;
+      @include mq('tablet-wide') {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    &__form{
+      p{
+        color: $color_3;
+      }
+      a{
+        text-decoration: underline;
+      }
+    }
+    &__width{
+      display: grid;
+      grid-gap: rem(30);
+      @include adaptiveValue(margin-bottom, 30, 30);
+
+      @include mq('tablet-wide') {
+        max-width: rem(495);
+      }
+    }
+    &__pic{
+      display: grid;
+      justify-content: center;
+      img{
+        max-width: 100%;
+      }
+    }
+    &__btn{
+      @include adaptiveValue(margin-top, 10, 10);
+      @include maq('tablet-wide') {
+        width: 100%;
+      }
+    }
+  }
+}

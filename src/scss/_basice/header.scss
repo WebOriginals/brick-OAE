@@ -1,0 +1,59 @@
+.header {
+  padding: rem(20) 0;
+  position: absolute;
+  width: 100%;
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include maq('tablet-wide') {
+      display: grid;
+      grid-template-columns: 110px auto;
+      grid-gap: 15px;
+    }
+  }
+  &__logo{
+    svg{
+      width: 100%;
+    }
+  }
+  &__wr{
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    @include maq('tablet-wide') {
+      gap: rem(20);
+    }
+  }
+  &-link{
+    color: $color_1;
+    @include adaptiveValue(font-size,18,14);
+    font-weight: 400;
+    transition: .5s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color_6;
+
+        path{
+          fill: $color_6;
+        }
+      }
+    }
+
+    @include maq('tablet-wide') {
+      &.not{
+        display: none;
+      }
+    }
+
+  }
+  &__btn{
+    @include maq('tablet-wide') {
+      display: none;
+    }
+    @include mq('tablet-wide') {
+      margin: 0 rem(10);
+    }
+  }
+}
