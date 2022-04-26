@@ -3,7 +3,7 @@
   @include adaptiveValue(padding-bottom, 120, 90);
   background-color: $color_4;
   color: $color_1;
-  background-image: url("../img/png/bg-darck-right.webp");
+  background-image: url("../img/png/bg-darck-right.png");
   background-position: bottom right;
   background-repeat: no-repeat;
   @include maq('tablet') {

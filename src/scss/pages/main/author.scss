@@ -95,7 +95,7 @@
   &-bg {
     background-color: $color_4;
     color: $color_1;
-    background-image: url("../img/png/bg-darck-left.webp");
+    background-image: url("../img/png/bg-darck-left.png");
     background-position: bottom left;
     background-repeat: no-repeat;
     @include maq('tablet') {

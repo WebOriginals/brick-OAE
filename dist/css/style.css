@@ -1985,10 +1985,12 @@ body.popup-show::after {
           align-items: center;
 }
 
+.no-webp .tab-form{
+  background-image: url("../img/png/bg-darck-right.png"); }
+
 .tab-form {
   background-color: #0D2839;
   color: #FFFFFF;
-  background-image: url("../img/png/bg-darck-right.webp");
   background-position: bottom right;
   background-repeat: no-repeat;
 }
@@ -2289,10 +2291,12 @@ body.popup-show::after {
   text-align: right;
 }
 
+.no-webp .author-bg{
+  background-image: url("../img/png/bg-darck-left.png"); }
+
 .author-bg {
   background-color: #0D2839;
   color: #FFFFFF;
-  background-image: url("../img/png/bg-darck-left.webp");
   background-position: bottom left;
   background-repeat: no-repeat;
 }
@@ -3745,3 +3749,7 @@ body.popup-show::after {
     fill: #AD8C65;
   }
 }
+
+.webp .tab-form{ background-image: url(../img/png/bg-darck-right.webp); }
+
+.webp .author-bg{ background-image: url(../img/png/bg-darck-left.webp); }
