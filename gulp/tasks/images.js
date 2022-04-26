@@ -11,10 +11,8 @@ export const images = () => {
 		)
 		.pipe(app.plugins.newer(app.path.build.images))
 		.pipe(
-
-			//webp()
 			app.plugins.if(
-				app.isDev,
+				app.isBuild,
 				webp()
 			)
 		)
