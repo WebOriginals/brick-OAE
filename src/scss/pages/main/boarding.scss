@@ -1,0 +1,78 @@
+.boarding{
+  .first__subTitle{
+    margin-bottom: 0;
+  }
+  .first-grid{
+    max-width: rem(900);
+  }
+  .first-grid__item{
+    border: none;
+    padding: 0;
+  }
+  &__form{
+    padding: rem(32);
+    border: 2px solid $color_1;
+    border-radius: rem(3);
+    position: relative;
+    margin-top: rem(30);
+    display: grid;
+    grid-gap: rem(30);
+
+    @include mq('desktop-wide') {
+      margin-top: rem(90);
+
+    }
+    @include mq('tablet') {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  &__title{
+    @include adaptiveValue(font-size,24, 20);
+    font-weight: 500;
+    margin-bottom: rem(30);
+    text-transform: uppercase;
+  }
+  &__grid{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: rem(30);
+    margin-bottom: rem(18);
+
+    input{
+      max-width: rem(300);
+    }
+  }
+  &__politics{
+    margin-bottom: rem(14);
+
+    a{
+      text-decoration: underline;
+    }
+  }
+  &__content{
+
+
+  }
+  &__img-ibg{
+    width: 260px;
+    height: 306px;
+    @include mq('tablet-wide') {
+      width: 320px;
+      height: 366px;
+      position: absolute;
+      top: -5%;
+      right: 0;
+    }
+    @include mq('desktop-wide') {
+      width: 350px;
+      height: 396px;
+      top: -15%;
+    }
+
+    img{
+      max-width: 100%;
+    }
+  }
+}
