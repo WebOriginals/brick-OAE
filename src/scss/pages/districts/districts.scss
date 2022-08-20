@@ -1,0 +1,67 @@
+.districts{
+  @include adaptiveValue(padding-top, 30, 15);
+  @include adaptiveValue(padding-bottom, 60, 45);
+
+  &-filter{
+    display: flex;
+    @include adaptiveValue(gap, 60, 30);
+    width: 100%;
+    padding-bottom: rem(15);
+
+
+    &__button{
+      text-transform: uppercase;
+      @include adaptiveValue(font-size,20, 16);
+      transition: .3s;
+      width: max-content;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $color_6;
+        }
+      }
+
+      &.__active{
+        color: $color_6;
+      }
+    }
+  }
+
+  &-offers{
+    @include adaptiveValue(padding-top, 45, 45);
+    display: grid;
+    grid-gap: rem(60);
+  }
+  .offer{
+    display: grid;
+    grid-gap: rem(10);
+
+    @include mq('phablet') {
+      display: grid;
+      grid-template-columns: 0.92fr 2fr;
+      grid-gap: rem(30) rem(60);
+    }
+
+    &__img-ibg{
+      min-height: rem(335);
+      max-height: rem(335);
+      @include mq('phablet') {
+        grid-row: span 3;
+      }
+      @include maq('phablet') {
+        margin-bottom: rem(10);
+      }
+    }
+    &__name{
+      @include adaptiveValue(font-size, 24, 20);
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    &__description{
+
+    }
+    &__btn{
+      max-width: fit-content;
+    }
+  }
+}

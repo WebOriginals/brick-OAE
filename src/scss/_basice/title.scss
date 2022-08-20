@@ -1,6 +1,9 @@
 .titlePage{
-  padding: 5px 0 30px;
-  @include mq('tablet-wide') {
-    padding: 10px 0 60px;
+  @include adaptiveValue(padding-top, 10, 10);
+  @include adaptiveValue(padding-bottom, 30, 15);
+
+  &__title{
+    font-weight: 400;
+    @include adaptiveValue(font-size,36, 24);
   }
 }

@@ -1,6 +1,38 @@
 .crumbs {
+  @include adaptiveValue(padding-top, 60, 60);
 
   &-list {
     display: flex;
+    flex-wrap: wrap;
+    gap: rem(10) rem(9);
+
+    a{
+      text-decoration: underline;
+      transition: .3s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: $color_6;
+        }
+      }
+    }
+    span{
+      opacity: .5;
+    }
+
+    li{
+      position: relative;
+      padding-right: rem(15);
+      &:not(:last-child):before{
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 1px;
+        background-color: $mainColor;
+        top: 50%;
+        right: 0;
+        opacity: .5;
+      }
+    }
   }
 }

@@ -13,16 +13,19 @@ mixin head(title)
 
 mixin title(title)
     section.titlePage
-        ._container
-            h1.h1= title
+        .titlePage__container
+            h1.titlePage__title= title
 
 mixin crumbs(title)
     section.crumbs
-        ._container
+        .crumbs__container
             ul.crumbs-list
-                li Spectr
                 li
-                    a(href="#")= title
+                    a(href="/") Главная
+                li
+                    a(href="#") Очень мега супер пупер длинное название просто ужас
+                li
+                    span= title
 
 mixin modalTypesPayment
     .serviceTypesPayment-item
